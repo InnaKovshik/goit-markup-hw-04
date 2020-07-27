@@ -23,6 +23,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 /*header*/
 
 .navigation-list-link,
@@ -111,10 +112,6 @@ body {
 .navigation-list-link:focus,
 .header-mail-link:focus,
 .header-mail-link:hover,
-.network-list:focus,
-.network-list:hover,
-.client-list:focus,
-.cclient-list:hover,
 .footer-tell:focus,
 .footer-tell:hover,
 .footer-mail:focus,
@@ -124,14 +121,32 @@ body {
   color: var(--background-color-focus);
 }
 
+.client-list:focus,
+.client-list:hover,
+.navigation-list-link:hover,
+.client-icon:focus,
+.client-icon:hover {
+  border-color: var(--background-color-focus);
+  fill: var(--background-color-focus);
+}
+
 /*main*/
 
-.main-img {
-  background: rgba(47, 48, 58, 0.8);
+.hero {
   height: 600px;
-  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
   text-align: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/headerimg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main-container {
@@ -148,8 +163,15 @@ body {
   background-color: var(--background-color-focus);
 }
 
-.header-tel-link,
-.header-mail-link {
+.address-icon {
+  width: 23px;
+  height: 15px;
+}
+
+.navigation-list-link,
+.navigation-list-link {
+  display: flex;
+  align-items: center;
   font-style: normal;
   font-weight: 500;
   line-height: 1.14;
@@ -167,7 +189,8 @@ body {
   color: var(--text-color-white);
 }
 
-.modal-btn {
+.modal-btn,
+.send-btn {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
@@ -191,13 +214,18 @@ body {
   margin-top: 94px;
 }
 
+.pictures-about-us {
+  height: 70px;
+  width: 70px;
+}
+
 .pictures {
   display: flex;
+  height: 120px;
   justify-content: center;
   align-items: center;
-  width: 270px;
-  height: 120px;
-  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .title-aboutus {
@@ -279,6 +307,9 @@ h2 {
   width: 270px;
   background-color: var(--background-color);
   text-align: center;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .team-foto:not(:last-child) {
@@ -304,6 +335,7 @@ h2 {
   width: 370px;
   width: calc((100% - 30px * 3) / 3);
   margin: 15px;
+  border: 4px;
 }
 
 .wedo-list:not(:last-child),
@@ -401,16 +433,57 @@ h2 {
   color: var(--text-color-white);
 }
 
-/*Portfolio*/
-.client {
+/*Кнопка отправить*/
+
+.send {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 94px;
+  margin-top: 72px;
+  margin-left: 94px;
+  width: 570px;
+  height: 86px;
+}
+
+.send-text {
+  position: absolute;
+  font-weight: bold;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-color-white);
+}
+
+.send-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: auto;
+  padding: 0em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+}
+
+.send-icon {
+  padding: 10px;
+  width: 44px;
+  height: 44px;
+  fill: white;
+}
+
+/*Portfolio*/
+
+.client-icon {
+  width: 170px;
+  height: 90px;
+  fill: #afb1b8;
 }
 
 .client-list {
   display: flex;
   justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   height: 90px;
   width: 170px;
   border: 1px solid #afb1b8;
@@ -461,4 +534,32 @@ h2 {
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--text-color-white);
+}
+
+.network-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+
+.network-icon:hover,
+.network-icon:focus,
+.network-list:hover {
+  background-color: var(--background-color-focus);
+  fill: white;
+}
+.network-icon-footer {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.network-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }

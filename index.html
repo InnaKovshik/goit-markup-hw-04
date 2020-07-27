@@ -38,22 +38,24 @@
           <address class="header-address">
             <ul class="list">
               <li class="adress-list">
-                <a class="navigation-list-link link" href=""
-                  ><img src="./images/email.svg" alt="почта"
-                /></a>
-                <a
-                  class="header-mail-link link"
-                  href="meilto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+                <a class="navigation-list-link link" href="meilto:info@devstudio.com"
+                  >
+                  <svg class="address-icon">
+                    <use href="./images/symbol-defs.svg#icon-email" width="16" hight="12"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+                
               </li>
+
+
               <li class="adress-list">
-                <a class="navigation-list-link link" href="">
-                  <img src="./images/tel.svg" alt="телефон" />
-                </a>
-                <a class="header-tel-link link" href="tel:+380961111111"
-                  >+38 096 111 11 11
-                </a>
+
+                <a class="navigation-list-link link" href="tel:+380961111111">
+                  <svg class="address-icon">
+                    <use href="./images/symbol-defs.svg#icon-tell"  width="10" hight="15"></use>
+                  </svg>+38 096 111 11 11
+                </a>                
               </li>
             </ul>
           </address>
@@ -62,7 +64,7 @@
     </header>
 
     <main>
-      <section class="main-img">
+      <section class="hero">
         <div class="main-container container">
           <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
           <button class="modal-btn">Заказать услугу</button>
@@ -75,14 +77,11 @@
           <h2 hidden class="title-two">О нас</h2>
           <ul class="aboutus-list list">
             <li class="list-about-us">
-              <a class="pictures"
-                ><img
-                  src="./images/antenna.svg"
-                  alt="Внимание к деталям"
-                  width="65"
-                  height="70"
-                />
-              </a>
+              <div class="pictures">
+                <svg class="pictures-about-us">
+                  <use href="./images/symbol-defs.svg#icon-antenna" width="70" hight="70"></use>
+                </svg>
+              </div>
               <h3 class="title-aboutus">Внимание к деталям</h3>
               <p class="text-aboutus">
                 Идейные соображения, а также начало повседневной работы по
@@ -90,14 +89,11 @@
               </p>
             </li>
             <li class="list-about-us">
-              <a class="pictures">
-                <img
-                  src="./images/clock.svg"
-                  alt="Пунктуальность"
-                  width="70"
-                  height="70"
-                />
-              </a>
+              <div class="pictures">
+                <svg class="pictures-about-us">
+                  <use href="./images/symbol-defs.svg#icon-clock" width="70" hight="70"></use>
+                </svg>
+              </div>
               <h3 class="title-aboutus">Пунктуальность</h3>
               <p class="text-aboutus">
                 Задача организации, в особенности же рамки и место обучения
@@ -105,14 +101,11 @@
               </p>
             </li>
             <li class="list-about-us">
-              <a class="pictures">
-                <img
-                  src="./images/comp.svg"
-                  alt="Планирование"
-                  width="70"
-                  height="70"
-                />
-              </a>
+              <div class="pictures">
+                <svg class="pictures-about-us">
+                  <use href="./images/symbol-defs.svg#icon-comp" width="70" hight="70"></use>
+                </svg>
+              </div>
               <h3 class="title-aboutus">Планирование</h3>
               <p class="text-aboutus">
                 Равным образом консультация с широким активом в значительной
@@ -120,14 +113,11 @@
               </p>
             </li>
             <li class="list-about-us">
-              <a class="pictures">
-                <img
-                  src="./images/cosmonaut.svg"
-                  alt="Современные технологии"
-                  width="70"
-                  height="70"
-                />
-              </a>
+              <div class="pictures">
+                <svg class="pictures-about-us">
+                  <use href="./images/symbol-defs.svg#icon-cosmonaut" width="70" hight="70"></use>
+                </svg>
+              </div>
               <h3 class="title-aboutus">Современные технологии</h3>
               <p class="text-aboutus">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -177,6 +167,7 @@
         <div class="container">
           <h2 class="title-two">Наша команда</h2>
           <ul class="team-list list">
+            
             <li class="team-foto">
               <img
                 src="./images/produkt.jpg"
@@ -188,45 +179,38 @@
               <p class="team-link-work" lang="en">Product Designer</p>
               <nav>
                 <ul class="team-list-link list">
-                  <li class="link-list">
-                    <a class="link" href="">
-                      <img
-                        src="./images/link/instagram.svg"
-                        alt="instagram"
-                        width="44"
-                        height="44"
-                    /></a>
-                  </li>
-                  <li class="link-list">
-                    <a class="link" href="">
-                      <img
-                        src="./images/link/twitter.svg"
-                        alt="twitter"
-                        width="44"
-                        height="44"
-                    /></a>
-                  </li>
-                  <li class="link-list">
-                    <a class="link" href="">
-                      <img
-                        src="./images/link/feisbook.svg"
-                        alt="Facebook"
-                        width="44"
-                        height="44"
-                    /></a>
-                  </li>
-                  <li class="link-list">
-                    <a class="link" href="">
-                      <img
-                        src="./images/link/in.svg"
-                        alt="LinkedIn"
-                        width="44"
-                        height="44"
-                    /></a>
-                  </li>
-                </ul>
-              </nav>
+                                      <li class="link-list">
+                      <a class="network-list link" href="">
+                        <svg class="network-icon">
+                          <use href=./images/symbol-defs2.svg#icon-instagram></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="link-list">
+                      <a class="network-list link" href="">
+                        <svg class="network-icon">
+                          <use href=./images/symbol-defs2.svg#icon-twitter></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="link-list">
+                      <a class="network-list link" href="">
+                        <svg class="network-icon">
+                          <use href=./images/symbol-defs2.svg#icon-faicbook></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="link-list">
+                      <a class="network-list link" href="">
+                        <svg class="network-icon">
+                          <use href=./images/symbol-defs2.svg#icon-linkedin></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                              </nav>
             </li>
+            
             <li class="team-foto">
               <img
                 src="./images/frontend.jpg"
@@ -237,44 +221,37 @@
               <h2 class="team-link">Ольга Иванова</h2>
               <p class="team-link-work" lang="en">Frontend Developer</p>
               <ul class="team-list-link list">
-                <li class="link-list">
-                  <a class="network-list link" href="">
-                    <img
-                      src="./images/link/instagram.svg"
-                      alt="instagram"
-                      width="44"
-                      height="44"
-                  /></a>
-                </li>
-                <li class="link-list">
-                  <a class="network-list link" href="">
-                    <img
-                      src="./images/link/twitter.svg"
-                      alt="twitter"
-                      width="44"
-                      height="44"
-                  /></a>
-                </li>
-                <li class="link-list">
-                  <a class="network-list link" href="">
-                    <img
-                      src="./images/link/feisbook.svg"
-                      alt="Facebook"
-                      width="44"
-                      height="44"
-                  /></a>
-                </li>
-                <li class="link-list">
-                  <a class="network-list link" href="">
-                    <img
-                      src="./images/link/in.svg"
-                      alt="LinkedIn"
-                      width="44"
-                      height="44"
-                  /></a>
-                </li>
-              </ul>
+                                  <li class="link-list">
+                    <a class="network-list link" href="">
+                      <svg class="network-icon">
+                        <use href=./images/symbol-defs2.svg#icon-instagram></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="link-list">
+                    <a class="network-list link" href="">
+                      <svg class="network-icon">
+                        <use href=./images/symbol-defs2.svg#icon-twitter></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="link-list">
+                    <a class="network-list link" href="">
+                      <svg class="network-icon">
+                        <use href=./images/symbol-defs2.svg#icon-faicbook></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="link-list">
+                    <a class="network-list link" href="">
+                      <svg class="network-icon">
+                        <use href=./images/symbol-defs2.svg#icon-linkedin></use>
+                      </svg>
+                    </a>
+                  </li>
+                              </ul>
             </li>
+           
             <li class="team-foto">
               <img
                 src="./images/marketing.jpg"
@@ -287,42 +264,35 @@
               <ul class="team-list-link list">
                 <li class="link-list">
                   <a class="network-list link" href="">
-                    <img
-                      src="./images/link/instagram.svg"
-                      alt="instagram"
-                      width="44"
-                      height="44"
-                  /></a>
+                    <svg class="network-icon">
+                      <use href=./images/symbol-defs2.svg#icon-instagram></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="link-list">
                   <a class="network-list link" href="">
-                    <img
-                      src="./images/link/twitter.svg"
-                      alt="twitter"
-                      width="44"
-                      height="44"
-                  /></a>
+                    <svg class="network-icon">
+                      <use href=./images/symbol-defs2.svg#icon-twitter></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="link-list">
                   <a class="network-list link" href="">
-                    <img
-                      src="./images/link/feisbook.svg"
-                      alt="Facebook"
-                      width="44"
-                      height="44"
-                  /></a>
+                    <svg class="network-icon">
+                      <use href=./images/symbol-defs2.svg#icon-faicbook></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="link-list">
                   <a class="network-list link" href="">
-                    <img
-                      src="./images/link/in.svg"
-                      alt="LinkedIn"
-                      width="44"
-                      height="44"
-                  /></a>
+                    <svg class="network-icon">
+                      <use href=./images/symbol-defs2.svg#icon-linkedin></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </li>
+
             <li class="team-foto">
               <img
                 src="./images/designer.jpg"
@@ -336,39 +306,31 @@
               <ul class="team-list-link list">
                 <li class="link-list">
                   <a class="network-list link" href="">
-                    <img
-                      src="./images/link/instagram.svg"
-                      alt="instagram"
-                      width="44"
-                      height="44"
-                  /></a>
+                  <svg class="network-icon">
+                    <use href=./images/symbol-defs2.svg#icon-instagram></use>
+                  </svg>
+                  </a>
                 </li>
                 <li class="link-list">
                   <a class="network-list link" href="">
-                    <img
-                      src="./images/link/twitter.svg"
-                      alt="twitter"
-                      width="44"
-                      height="44"
-                  /></a>
+                  <svg class="network-icon">
+                    <use href=./images/symbol-defs2.svg#icon-twitter></use>
+                  </svg>
+                  </a>
                 </li>
                 <li class="link-list">
                   <a class="network-list link" href="">
-                    <img
-                      src="./images/link/feisbook.svg"
-                      alt="Facebook"
-                      width="44"
-                      height="44"
-                  /></a>
+                  <svg class="network-icon">
+                    <use href=./images/symbol-defs2.svg#icon-faicbook></use>
+                  </svg>
+                  </a>
                 </li>
                 <li class="link-list">
                   <a class="network-list link" href="">
-                    <img
-                      src="./images/link/in.svg"
-                      alt="LinkedIn"
-                      width="44"
-                      height="44"
-                  /></a>
+                  <svg class="network-icon">
+                    <use href=./images/symbol-defs2.svg#icon-linkedin></use>
+                  </svg>
+                  </a>
                 </li>
               </ul>
             </li>
@@ -381,34 +343,48 @@
         <h2 class="title-two">Постоянные клиенты</h2>
         <ul class="client list">
           <li class="client-link">
-            <a class="client-list" href=""
-              ><img src="./images/pc1.svg" alt="компания"
-            /></a>
+            <a class="client-list" href="">
+              <svg class="client-icon">
+                <use href="./images/symbol-defs.svg#icon-pc1"  width="44" hight="49"></use>
+              </svg>
+            </a>
           </li>
           <li class="client-link">
             <a class="client-list" href=""
-              ><img src="./images/pc2.svg" alt="компания"
-            /></a>
+              >
+              <svg class="client-icon">
+                <use href="./images/symbol-defs.svg#icon-pc2" width="40" hight="52"></use>
+              </svg>
+              </a>
           </li>
           <li class="client-link">
-            <a class="client-list" href=""
-              ><img src="./images/pc3.svg" alt="компания"
-            /></a>
+            <a class="client-list" href="">
+              <svg class="client-icon">
+                <use href="./images/symbol-defs.svg#icon-pc3" width="41" hight="42"></use>
+              </svg>
+            </a>
+              </a>
           </li>
           <li class="client-link">
-            <a class="client-list" href=""
-              ><img src="./images/pc4.svg" alt="компания"
-            /></a>
+            <a class="client-list" href="">
+              <svg class="client-icon">
+                <use href="./images/symbol-defs.svg#icon-pc4" width="80" hight="42"></use>
+              </svg>
+            </a>
           </li>
           <li class="client-link">
-            <a class="client-list" href=""
-              ><img src="./images/pc5.svg" alt="компания"
-            /></a>
+            <a class="client-list" href="">
+              <svg class="client-icon">
+                <use href="./images/symbol-defs.svg#icon-pc5" width="59" hight="47"></use>
+              </svg>
+            </a>
           </li>
           <li class="client-link">
-            <a class="client-list" href=""
-              ><img src="./images/pc6.svg" alt="компания"
-            /></a>
+            <a class="client-list" href="">
+              <svg class="client-icon">
+                <use href="./images/symbol-defs.svg#icon-pc6" width="88" hight="45"></use>
+              </svg>
+          </a>
           </li>
         </ul>
       </div>
@@ -449,43 +425,46 @@
           <b class="footer-network">присоединяйтесь</b>
           <ul class="network-link list">
             <li class="network">
-              <a class="network-list link" href=""
-                ><img
-                  src="./images/link/footer/instagram.svg"
-                  alt="instagram"
-                  width="44"
-                  height="44"
-              /></a>
+              <a class="network-list " href="">
+                <svg class="network-icon-footer">
+                  <use href="./images/symbol-defs2.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
             <li class="network">
-              <a class="network-list link" href=""
-                ><img
-                  src="./images/link/footer/twitter.svg"
-                  alt="twitter"
-                  width="44"
-                  height="44"
-              /></a>
+              <a class="network-list " href="">
+                <svg class="network-icon-footer">
+                  <use href="./images/symbol-defs2.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
             <li class="network">
-              <a class="network-list link" href="">
-                <img
-                  src="./images/link/footer/faicbook.svg"
-                  alt="facebook"
-                  width="44"
-                  height="44"
-              /></a>
+              <a class="network-list " href="">
+                <svg class="network-icon-footer">
+                  <use href="./images/symbol-defs2.svg#icon-faicbook"></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a class="network-list link" href="">
-                <img
-                  src="./images/link/footer/in.svg"
-                  alt="LinkedIn"
-                  width="44"
-                  height="44"
-              /></a>
+              <a class="network-list " href="">
+                <svg class="network-icon-footer">
+                  <use href="./images/symbol-defs2.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
+
+<!--Кнопка футер-->
+<div class="send">
+  <b class="send-text">Подпишитесь на рассылку</b>
+<button class="send-btn">Подписаться
+  <svg class="send-icon">
+    <use href="./images/symbol-defs.svg#icon-send" width="24" hight="24"></use>
+  </svg>
+</button>
+</div>
+
       </div>
     </footer>
   </body>
