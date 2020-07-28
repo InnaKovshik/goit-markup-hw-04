@@ -24,9 +24,22 @@ body {
   margin-right: auto;
 }
 
+img {
+  box-sizing: border-box;
+}
+
 /*header*/
+header {
+  height: 81px;
+  border: 1px;
+}
+
+.header-icon {
+  margin-right: 10px;
+}
 
 .navigation-list-link,
+.address-list-link,
 .header-mail-link,
 .header-tel-link {
   padding-top: 32px;
@@ -44,8 +57,6 @@ body {
 .navigation-header {
   display: flex;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .navigation-menu {
@@ -69,6 +80,10 @@ body {
 
 .adress-list:not(:last-child) {
   margin-right: 30px;
+}
+
+.logo {
+  margin-right: 85px;
 }
 
 .logo-web,
@@ -104,6 +119,7 @@ body {
   display: flex;
   list-style-type: none;
   padding: 0px;
+  margin: 0px;
 }
 
 .header-tel-link:hover,
@@ -121,13 +137,47 @@ body {
   color: var(--background-color-focus);
 }
 
-.client-list:focus,
-.client-list:hover,
-.navigation-list-link:hover,
-.client-icon:focus,
-.client-icon:hover {
-  border-color: var(--background-color-focus);
+.client-list:hover svg {
   fill: var(--background-color-focus);
+}
+
+.client-list:hover {
+  border-color: var(--background-color-focus);
+}
+
+.address-list-link,
+.navigation-list-link {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+}
+
+.address-list-link:hover svg {
+  fill: var(--background-color-focus);
+}
+
+.address-list-link:hover {
+  color: var(--background-color-focus);
+}
+
+.navigation-list-link::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
+.navigation-list-link:hover::after {
+  display: block;
 }
 
 /*main*/
@@ -157,28 +207,6 @@ body {
   padding-bottom: 200px;
 }
 
-.btn-menu:focus,
-.btn-menu:hover {
-  color: var(--text-color-white);
-  background-color: var(--background-color-focus);
-}
-
-.address-icon {
-  width: 23px;
-  height: 15px;
-}
-
-.navigation-list-link,
-.navigation-list-link {
-  display: flex;
-  align-items: center;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--text-color);
-}
-
 .main-title {
   font-weight: 900;
   font-size: 44px;
@@ -191,14 +219,21 @@ body {
 
 .modal-btn,
 .send-btn {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  width: 200px;
+  height: 50px;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   color: var(--text-color-white);
-  background: var(--background-color-focus);
+  background-color: var(--background-color-focus);
 }
 
 /*main*/
@@ -214,11 +249,6 @@ body {
   margin-top: 94px;
 }
 
-.pictures-about-us {
-  height: 70px;
-  width: 70px;
-}
-
 .pictures {
   display: flex;
   height: 120px;
@@ -226,6 +256,8 @@ body {
   align-items: center;
   border-radius: 4px;
   margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
 }
 
 .title-aboutus {
@@ -326,16 +358,14 @@ h2 {
   width: 370px;
 }
 
-.portfolio-size {
-  margin: -15px;
+li.portfolio-catalog:nth-last-child(3n) {
+  margin-right: 0px;
 }
-
 .portfolio-catalog {
   height: 404px;
   width: 370px;
-  width: calc((100% - 30px * 3) / 3);
-  margin: 15px;
-  border: 4px;
+  width: calc((100%-30px * 3) / 3);
+  border-radius: 4px, black;
 }
 
 .wedo-list:not(:last-child),
@@ -362,6 +392,7 @@ h2 {
 .btn-portfolio {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .btn-list:not(:last-child) {
@@ -466,18 +497,10 @@ h2 {
 
 .send-icon {
   padding: 10px;
-  width: 44px;
-  height: 44px;
   fill: white;
 }
 
 /*Portfolio*/
-
-.client-icon {
-  width: 170px;
-  height: 90px;
-  fill: #afb1b8;
-}
 
 .client-list {
   display: flex;
@@ -491,24 +514,34 @@ h2 {
 }
 
 .btn-menu {
-  padding-right: 22px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 100%;
   padding-left: 22px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-right: 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--text-color-title);
   background: #f5f4fa;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-menu:not(:last-child) {
+  margin-left: 8px;
+}
+
+.btn-menu:focus,
+.btn-menu:hover {
+  background-color: var(--background-color-focus);
+  color: var(--text-color-white);
 }
 
 .portfolio-title {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 20px;
-  padding-bottom: 4px;
+  margin-top: 20px;
+  margin-bottom: 4px;
   padding-right: 24px;
   font-weight: bold;
   font-size: 18px;
@@ -536,21 +569,20 @@ h2 {
   color: var(--text-color-white);
 }
 
-.network-icon {
-  width: 20px;
-  height: 20px;
+.network-icon,
+.client-icon {
   fill: #afb1b8;
 }
 
-.network-icon:hover,
-.network-icon:focus,
 .network-list:hover {
   background-color: var(--background-color-focus);
+}
+
+.network-list:hover svg {
   fill: white;
 }
+
 .network-icon-footer {
-  width: 20px;
-  height: 20px;
   fill: white;
 }
 
